@@ -14,7 +14,10 @@ class Solution {
         return max;*/
         
         HashMap<Character,Integer> map = new HashMap<>();
-        int i =0, j=0, len=0,n=s.length();
+        int i =0;
+        int j=0;
+        int len=0;
+        int n=s.length();
         while(j<n){
             if(map.containsKey(s.charAt(j))){
                 i=Math.max(map.get(s.charAt(j))+1,i);
