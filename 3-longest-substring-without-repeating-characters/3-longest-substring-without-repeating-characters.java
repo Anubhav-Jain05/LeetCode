@@ -14,14 +14,14 @@ class Solution {
         return max;*/
         
         HashMap<Character,Integer> map = new HashMap<>();
-        int left =0, right=0, len=0,n=s.length();
-        while(right<n){
-            if(map.containsKey(s.charAt(right))){
-                left=Math.max(map.get(s.charAt(right))+1,left);
+        int i =0, j=0, len=0,n=s.length();
+        while(j<n){
+            if(map.containsKey(s.charAt(j))){
+                i=Math.max(map.get(s.charAt(j))+1,i);
             }
-               map.put(s.charAt(right),right);
-               len=Math.max(len,right-left +1);
-               right++;
+               map.put(s.charAt(j),j);
+               len=Math.max(len,j-i +1);
+               j++;
         }
                return len;
     }
