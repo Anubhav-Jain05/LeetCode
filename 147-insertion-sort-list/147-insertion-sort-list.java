@@ -10,17 +10,17 @@
  */
 class Solution {
     public ListNode insertionSortList(ListNode head) {
-       /* if(head==null || head.next==null){
+        if(head==null || head.next==null){
             return head;
         }
         
-        
+        ListNode slow=head;
         head.next=this.insertionSortList(head.next);
-        if(head.val <= head.next.val){
-                 return head;
+        if(slow.val <= slow.next.val){
+                 slow=slow.next;
         }
         else{
-            ListNode slow=head;
+            
             while(slow.next!=null){
             
              if (slow.val > slow.next.val){
@@ -35,9 +35,9 @@ class Solution {
             }
         }
         }
-        return head;*/
+        return head;
         
-         ListNode dummy=new ListNode(-1);
+         /*ListNode dummy=new ListNode(0);
     ListNode prev=dummy;
     ListNode slow=head;
     while(slow!=null) {
@@ -50,6 +50,6 @@ class Solution {
         prev.next=slow;
         slow=next;
     }
-    return dummy.next;
+    return dummy.next;*/
     }
 }
