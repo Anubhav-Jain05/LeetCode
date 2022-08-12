@@ -16,11 +16,9 @@ class Solution {
         
         ListNode slow=head;
         head.next=this.insertionSortList(head.next);
-        
         if(slow.val <= slow.next.val){
                  slow=slow.next;
         }
-        
         else{
             
             while(slow.next!=null){
@@ -32,7 +30,6 @@ class Solution {
                 slow=slow.next;
                 
             }
-                
             else{
                 break;
             }
