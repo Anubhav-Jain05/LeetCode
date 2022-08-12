@@ -13,18 +13,22 @@ class Solution {
         if(head==null || head.next==null){
             return head;
         }
+        
         ListNode slow=head;
         head.next=this.insertionSortList(head.next);
         if(slow.val <= slow.next.val){
                  slow=slow.next;
         }
         else{
+            
             while(slow.next!=null){
+            
              if (slow.val > slow.next.val){
                 int temp= slow.val;
                 slow.val=slow.next.val;
                 slow.next.val=temp;
                 slow=slow.next;
+                
             }
             else{
                 break;
