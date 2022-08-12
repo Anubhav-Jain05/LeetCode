@@ -10,7 +10,7 @@
  */
 class Solution {
     public ListNode insertionSortList(ListNode head) {
-        if(head==null || head.next==null){
+        /*if(head==null || head.next==null){
             return head;
         }
         
@@ -35,9 +35,9 @@ class Solution {
             }
         }
         }
-        return head;
+        return head;*/
         
-         /*ListNode dummy=new ListNode(0);
+         ListNode dummy=new ListNode(0);
     ListNode prev=dummy;
     ListNode slow=head;
     while(slow!=null) {
@@ -45,11 +45,11 @@ class Solution {
         while(prev.next!=null&&prev.next.val<slow.val) {
             prev=prev.next;
         }
-        ListNode next=slow.next;
+        ListNode temp=slow.next;
         slow.next=prev.next;
         prev.next=slow;
-        slow=next;
+        slow=temp;
     }
-    return dummy.next;*/
+    return dummy.next;
     }
 }
