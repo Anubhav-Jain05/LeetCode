@@ -37,7 +37,7 @@ class Solution {
         }
         return head;*/
         
-         ListNode dummy=new ListNode(0);
+         ListNode dummy=new ListNode(-1);
     ListNode prev=dummy;
     ListNode slow=head;
     while(slow!=null) {
