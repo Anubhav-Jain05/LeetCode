@@ -37,19 +37,19 @@ class Solution {
         }
         return head;*/
         
-         ListNode helper=new ListNode(0);
-    ListNode pre=helper;
-    ListNode current=head;
-    while(current!=null) {
-        pre=helper;
-        while(pre.next!=null&&pre.next.val<current.val) {
-            pre=pre.next;
+         ListNode dummy=new ListNode(0);
+    ListNode prev=dummy;
+    ListNode slow=head;
+    while(slow!=null) {
+        prev=dummy;
+        while(prev.next!=null&&prev.next.val<slow.val) {
+            prev=prev.next;
         }
-        ListNode next=current.next;
-        current.next=pre.next;
-        pre.next=current;
-        current=next;
+        ListNode next=slow.next;
+        slow.next=prev.next;
+        prev.next=slow;
+        slow=next;
     }
-    return helper.next;
+    return dummy.next;
     }
 }
