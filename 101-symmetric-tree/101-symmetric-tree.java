@@ -29,15 +29,26 @@ class Solution {
             return false;
         }
         return(p.val == q.val) && symmetric(p.left,q.right) && symmetric(p.right,q.left);*/
-          return root==null || isSymmetricHelp(root.left, root.right);
-}
-
-private boolean isSymmetricHelp(TreeNode left, TreeNode right){
-    if(left==null || right==null)
-        return left==right;
-    if(left.val!=right.val)
-        return false;
-    return isSymmetricHelp(left.left, right.right) && isSymmetricHelp(left.right, right.left);
-}
-    
+        
+        if(root==null)return true;
+        Queue<TreeNode> queue=new LinkedList<>();
+        queue.add(root.left);
+        queue.add(root.right);
+        while(!queue.isEmpty()){
+            TreeNode p=queue.poll();
+            TreeNode  q=queue.poll();
+            if(p==null && q==null){
+                continue;
+            }
+            if(p==null || q==null || p.val!=q.val){
+                return false;
+            }
+            queue.add(p.left);
+            queue.add(q.right);
+            queue.add(p.right);
+            queue.add(q.left);
+        }
+        return true;
+        
+    }
 }
