@@ -21,7 +21,7 @@ class Solution {
         return symmetric(root.left,root.right);
         
     }
-    public boolean symmetric(TreeNode p,TreeNode q){
+    private boolean symmetric(TreeNode p,TreeNode q){
         if(p==null && q==null){
             return true;
         }
