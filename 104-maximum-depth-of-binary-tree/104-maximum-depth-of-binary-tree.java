@@ -40,11 +40,14 @@ class Solution {
         }
         return count;*/
         
-        if(root==null){
-            return 0;
-        }
-        return 1+Math.max(maxDepth(root.left),maxDepth(root.right));
         
+        // recursive approach
+        
+       /* if(root==null){
+           return 0;
+        }
+        return 1+Math.max(maxDepth(root.left),maxDepth(root.right));*/
+        return (root==null)?0:1+Math.max(maxDepth(root.left),maxDepth(root.right));
         
         
     }
