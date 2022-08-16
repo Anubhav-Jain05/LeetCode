@@ -21,7 +21,7 @@ class Solution {
             return list;
         }
         q.add(root);
-        while(q.size()>0){
+        while(!q.isEmpty()){
             List<Integer> level = new ArrayList<>();
             int cnt= q.size();
             for(int i=0;i<cnt;i++){
