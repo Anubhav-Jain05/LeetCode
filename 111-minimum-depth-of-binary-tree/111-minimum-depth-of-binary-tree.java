@@ -25,9 +25,10 @@ class Solution {
             return 0;
         }
         queue.add(root);
-        int count=1;
+        int count=0;
         while(!queue.isEmpty()){
             int cnt=queue.size();
+            count++;
             for(int i=0;i<cnt;i++){
                 TreeNode node = queue.poll();
                 if(node.left==null && node.right==null){
@@ -40,7 +41,7 @@ class Solution {
                     queue.add(node.right);
                 }
             }
-            count++;
+           // count++;
         }
         return count;
     }
