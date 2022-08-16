@@ -27,8 +27,11 @@ class Solution {
             int cnt = queue.size();
             for(int i=0;i<cnt;i++){
                 TreeNode node= queue.poll();
-                if(zigzag)level.add(0,node.val);
-                else level.add(node.val);
+                if(zigzag){
+                    level.add(0,node.val);
+                }else {
+                     level.add(node.val);
+                }
                 if(node.left!=null){
                     queue.add(node.left);
                 }
