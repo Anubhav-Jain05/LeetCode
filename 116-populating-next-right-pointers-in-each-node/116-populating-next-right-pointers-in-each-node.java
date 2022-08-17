@@ -48,7 +48,7 @@ class Solution {
         return root;*/
         
         if(root==null){
-            return root ;
+            return root ;  //null
         }
         if(root.left!=null){
             root.left.next=root.right;
