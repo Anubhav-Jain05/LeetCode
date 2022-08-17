@@ -34,7 +34,7 @@ class Solution {
                     q.add(node.left);
                 }
                 if(node.right!=null){
-                   // node.right.val += node.val;
+                    //node.right.val += node.val;
                     q.add(node.right);
                 }
             }
