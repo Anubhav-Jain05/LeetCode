@@ -23,7 +23,7 @@ class Node {
 
 class Solution {
     public Node connect(Node root) {
-      Queue<Node> q= new LinkedList<>();
+     /* Queue<Node> q= new LinkedList<>();
         if(root==null){
             return root ;
         }
@@ -44,9 +44,25 @@ class Solution {
                     q.add(node.right);
                 }
             }
-            
+        }
+        return root;*/
+        
+        if(root==null){
+            return null;
+        }
+        if(root.left!=null){
+            root.left.next=root.right;
+        
+            if(root.next!=null){
+                root.right.next=root.next.left;
+        }
+        
+        
+        connect(root.left);
+        connect(root.right);
         }
         return root;
+        
     }
     
 }
