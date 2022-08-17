@@ -16,12 +16,12 @@
 class Solution {
     public boolean hasPathSum(TreeNode root, int targetSum) {
         Queue<TreeNode> q= new LinkedList<>();
-        //if(root==null){
-          //  return false;
-        //}
+        if(root==null){
+            return false;
+        }
         q.add(root);
         int s=0;
-        while(!q.isEmpty() && root!=null){
+        while(!q.isEmpty()){
            // List<Integer> sum=new ArrayList<>();
            int cnt = q.size();
             for(int i=0;i<cnt;i++){
