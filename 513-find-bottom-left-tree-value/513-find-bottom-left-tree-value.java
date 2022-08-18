@@ -67,12 +67,13 @@ class Solution {
            // res=q.peek();
             for(int i=0;i<cnt;i++){
                 TreeNode node = q.poll();
-                if(i==0) res=node.val;
-                if(node.left!=null){
-                    q.add(node.left);
-                }
+                res=node.val;
+                //if(i==0) res=node.val;
                 if(node.right!=null){
                     q.add(node.right);
+                }
+                if(node.left!=null){
+                    q.add(node.left);
                 }
             }
         }
