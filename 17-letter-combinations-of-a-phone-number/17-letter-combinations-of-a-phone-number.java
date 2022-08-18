@@ -7,7 +7,7 @@ class Solution {
         list.add("");
         char[][] ch = {{},{},{'a','b','c'},{'d','e','f'},{'g','h','i'},{'j','k','l'},{'m','n','o'},{'p','q','r','s'},{'t','u','v'},{'w','x','y','z'}};
         for(int i=0;i<digits.length();i++){
-            List<String> res= new ArrayList<>();
+            List<String> res= new LinkedList<>();
             int num=digits.charAt(i)-'0';
             for(String s : list){
                 for(int j=0;j<ch[num].length;j++){
