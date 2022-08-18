@@ -38,10 +38,10 @@ class Solution {
         }
         return res.val;*/
         
-        Queue<TreeNode> q= new LinkedList<>();
-       // if(root==null){
-         //   return 0;
-        //}
+       /* Queue<TreeNode> q= new LinkedList<>();
+        if(root==null){
+            return 0;
+        }
         q.add(root);
         while(!q.isEmpty()){
             root=q.poll();
@@ -52,6 +52,30 @@ class Solution {
                 q.add(root.left);
             }
         }
-        return root.val;
+        return root.val;*/
+        
+        Queue<TreeNode> q= new LinkedList<>();
+        if(root==null){
+            return 0;
+        }
+        q.add(root);
+        int res=0;
+        //TreeNode res=null;
+        while(!q.isEmpty()){
+           // int sum=0;
+            int cnt = q.size();
+           // res=q.peek();
+            for(int i=0;i<cnt;i++){
+                TreeNode node = q.poll();
+                if(i==0) res=node.val;
+                if(node.left!=null){
+                    q.add(node.left);
+                }
+                if(node.right!=null){
+                    q.add(node.right);
+                }
+            }
+        }
+        return res;
     }
 }
