@@ -39,9 +39,9 @@ class Solution {
         return res.val;*/
         
         Queue<TreeNode> q= new LinkedList<>();
-        if(root==null){
-            return 0;
-        }
+       // if(root==null){
+         //   return 0;
+        //}
         q.add(root);
         while(!q.isEmpty()){
             root=q.poll();
