@@ -23,7 +23,12 @@ class Solution {
         int sum =0;
         int max=0;
         for(int i=0;i<nums.length;i++){
-           sum +=nums[i]==1?1:-1;
+          // sum +=nums[i]==1?1:-1;
+            if(nums[i]==1){
+                sum++;
+            }else{
+                sum--;
+            }
             if(map.containsKey(sum)){
                 max=Math.max(max,i-map.get(sum));
             }else{
