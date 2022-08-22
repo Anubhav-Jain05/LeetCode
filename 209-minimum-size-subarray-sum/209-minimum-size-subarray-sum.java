@@ -13,6 +13,9 @@ class Solution {
             }
         }
         return (max != Integer.MAX_VALUE)?max:0;*/
+        
+        // two pointer apptoach 
+        
         if(nums==null || nums.length==0){
             return 0;
         }
@@ -21,8 +24,8 @@ class Solution {
         int sum=0;
         int min=Integer.MAX_VALUE;
         while(j<nums.length){
-            sum += nums[j++];
-            //j++;
+            sum += nums[j];
+            j++;
             while(sum >= target){
                 min= Math.min(min,j-i);
                 sum -= nums[i++];
