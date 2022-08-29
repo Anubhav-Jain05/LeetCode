@@ -14,8 +14,8 @@ class Solution {
         }
         return true;*/
         
-        //HashSet<Integer> hs = new HashSet<>();
-        Set hs = new HashSet();
+        HashSet<String> hs = new HashSet<>();
+        //Set hs = new HashSet();
         for(int i=0;i<9;++i){
             for(int j=0;j<9;++j){
                 char no= board[i][j];
