@@ -15,22 +15,22 @@ class Solution {
         return true;*/
         
         //HashSet<Integer> hs = new HashSet<>();
-       /* Set hs = new HashSet();
+        Set hs = new HashSet();
         for(int i=0;i<9;++i){
             for(int j=0;j<9;++j){
                 char no= board[i][j];
                 if(no != '.'){
-                    if(!hs.add(no + i) || 
-                       !hs.add(no + j) || 
-                       !hs.add( no + i/3 +"-"+ j/3)){
+                    if(!hs.add(no +"in rows"+ i) || 
+                       !hs.add(no +"in column"+ j) || 
+                       !hs.add( no +"in block"+ i/3 +"-"+ j/3)){
                         return false;
                     }
                 }
             }
         }
-        return true;*/
+        return true;
         
-        Set seen = new HashSet();
+        /*Set seen = new HashSet();
     for (int i=0; i<9; ++i) {
         for (int j=0; j<9; ++j) {
             char number = board[i][j];
@@ -41,7 +41,7 @@ class Solution {
                     return false;
         }
     }
-    return true;
+    return true;*/
 
     }
 }
