@@ -27,9 +27,7 @@ class Solution {
             for(int i=0;i<cnt;i++){
                 TreeNode node = q.poll();
                 sum += node.val;
-                
-                
-                if(node.left!=null){
+                 if(node.left!=null){
                    // node.left.val += node.val; 
                     q.add(node.left);
                 }
