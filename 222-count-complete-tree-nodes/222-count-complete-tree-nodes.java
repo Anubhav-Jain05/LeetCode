@@ -15,7 +15,7 @@
  */
 class Solution {
     public int countNodes(TreeNode root) {
-        Queue<TreeNode> q= new LinkedList<>();
+       /* Queue<TreeNode> q= new LinkedList<>();
         if(root==null){
             return 0;
         }
@@ -38,8 +38,24 @@ class Solution {
                 }
             }
         }
-        return count;
+        return count;*/
         
+        int lh = 0;
+        int rh=0;
+        TreeNode cur= root;
+        while(cur!=null){
+                lh++;
+                cur= cur.left;
+        }
+        cur=root;
+        while(cur!=null){
+            rh++;
+            cur=cur.right;
+        }
+        if(lh==rh){
+            return (int)Math.pow(2,lh)-1;
+        }
+        return 1+countNodes(root.left) + countNodes(root.right);
         
     }
 }
