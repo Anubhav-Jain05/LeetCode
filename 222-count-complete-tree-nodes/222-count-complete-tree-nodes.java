@@ -24,10 +24,10 @@ class Solution {
         while(!q.isEmpty()){
             int cnt = q.size();
             for(int i=0;i<cnt;i++){
-                List<Integer> list = new ArrayList<>();
+                //List<Integer> list = new ArrayList<>();
                 TreeNode node = q.poll();
                 count++;
-                list.add(node.val);
+                //list.add(node.val);
                 if(node.left!=null){
                     q.add(node.left);
                    // count++;
@@ -39,5 +39,7 @@ class Solution {
             }
         }
         return count;
+        
+        
     }
 }
