@@ -2,8 +2,8 @@ class Solution {
     public String frequencySort(String s) {
        // String res= new String("");
         HashMap<Character,Integer> map= new HashMap<>();
-        for(char c : s.toCharArray()){
-            map.put(c,map.getOrDefault(c,0)+1);
+        for(int i=0;i<s.length();i++){
+            map.put(s.charAt(i),map.getOrDefault(s.charAt(i),0)+1);
             
         }
         List<Character> list = new ArrayList<>(map.keySet());
