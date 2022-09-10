@@ -10,7 +10,7 @@ class Solution {
         Collections.sort(list,(a,b)->(map.get(b)-map.get(a))); 
         
         StringBuilder sb = new StringBuilder();
-        for(Object ch : list){
+        for(char ch : list){
             for(int i=0;i<map.get(ch);i++){
                 sb.append(ch);
             }
