@@ -11,8 +11,9 @@ class Solution {
                     }
                     j--;
             }
-            arr[i]=grea;            
+            arr[i]=grea;
         }
         return arr;
+        
     }
 }
