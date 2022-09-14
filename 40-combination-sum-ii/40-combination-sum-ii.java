@@ -19,5 +19,8 @@ class Solution {
         Arrays.sort(candidates);
         findCombination(0,candidates,target,ans,new ArrayList<>());
         return ans;
+        
+        //TC- 2^n * k;
+        //SC- k * x;
     }     
 }
