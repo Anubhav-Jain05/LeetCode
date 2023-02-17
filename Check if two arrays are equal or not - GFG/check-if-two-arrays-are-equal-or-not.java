@@ -50,10 +50,23 @@ class Solution{
         if(a != b){
             return false;
         }
-        Arrays.sort(A);
-        Arrays.sort(B);
+        // Arrays.sort(A);
+        // Arrays.sort(B);
+        // for(int i=0;i<N;i++){
+        //     if(A[i] != B[i]){
+        //         return false;
+        //     }
+        // }
+        // return true;
+        HashMap<Long,Integer> map= new HashMap<>();
         for(int i=0;i<N;i++){
-            if(A[i] != B[i]){
+            map.put(A[i],map.getOrDefault(A[i],0)+1);
+            map.put(B[i],map.getOrDefault(B[i],0)-1);
+        }
+        for(Map.Entry<Long,Integer> entry:map.entrySet()){
+            long c=entry.getKey();
+            int cnt=entry.getValue();
+            if(cnt > 0){
                 return false;
             }
         }
